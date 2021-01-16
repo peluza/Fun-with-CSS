@@ -1,0 +1,21 @@
+a {
+  display: inline-block;
+  position: relative;
+  text-decoration: none;
+  color: #ac2828;
+}
+
+a::after {
+  content: "";
+  display: block;
+  width: 0;
+  height: 2px;
+  left: 0;
+  background-color: #ac2828;
+  transition: width 0.4s ease 0.4s;
+}
+
+a:hover:after {
+  width: 100%;
+  left: 0;
+}
