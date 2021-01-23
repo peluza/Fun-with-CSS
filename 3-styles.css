@@ -1,5 +1,6 @@
 .menu-item {
   display: none;
+  cursor: none;
 }
 
 input {
@@ -11,6 +12,7 @@ input:checked ~ a {
   opacity: 1;
 }
 .menu-open-button {
+  cursor: none;
   display: flex;
   align-items: center;
   justify-content: center;
