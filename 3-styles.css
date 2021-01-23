@@ -7,8 +7,8 @@ input {
 }
 
 input:checked ~ a {
-  display: block;
-  transition-property: left;
+  visibility: visible;
+  opacity: 1;
 }
 .menu-open-button {
   display: flex;
@@ -21,7 +21,6 @@ input:checked ~ a {
   width: 30px;
   height: 30px;
   background-color: #d24c4c;
-  transition: transform 200ms;
 }
 
 .menu-line {
@@ -36,16 +35,17 @@ input:checked ~ a {
   height: 2px;
   background-color: #d24c4c;
   margin: 1px;
+  transition: transform, 0.2s;
 }
 
 input:checked ~ .menu-open-button .menu-line-1 {
-  transform: rotate(-45deg) translate(0%, 50%);
-  margin: 0;
+  transform: rotate(-45deg);
+  position: absolute;
 }
 
 input:checked ~ .menu-open-button .menu-line-2 {
-  transform: rotate(45deg) translate(0%, -50%);
-  margin: 0;
+  transform: rotate(45deg);
+  position: absolute;
 }
 
 input:checked ~ .menu-open-button .menu-line-3 {
@@ -57,23 +57,23 @@ input:checked ~ .menu-open-button .menu-line-3 {
   height: 35px;
   background-color: white;
 }
-a {
-  box-sizing: border-box;
-  display: inline-block;
+.menu-item {
+  display: flex;
   border: 1px solid black;
   border-radius: 20px;
   width: 30px;
   height: 30px;
-  line-height: 30px;
-  font-weight: bold;
-  text-align: center;
-  user-select: none;
+  align-items: center;
+  justify-content: center;
   color: white;
   margin: 2px;
   background-color: #d24c4c;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.2s ease-in-out;
 }
 
-a:hover {
+.menu-item:hover {
   color: #d24c4c;
   background-color: white;
 }
