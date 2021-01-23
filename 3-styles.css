@@ -15,8 +15,7 @@ input:checked ~ a {
   align-items: center;
   justify-content: center;
   flex-direction: column;
-  box-sizing: border-box;
-  border: 1px solid black;
+  border: 1px solid #d24c4c;
   border-radius: 20px;
   width: 30px;
   height: 30px;
@@ -31,10 +30,6 @@ input:checked ~ a {
 }
 
 .menu-open-button:hover .menu-line {
-  width: 15px;
-  height: 2px;
-  background-color: #d24c4c;
-  margin: 1px;
   transition: transform, 0.2s;
 }
 
@@ -55,11 +50,10 @@ input:checked ~ .menu-open-button .menu-line-3 {
 .menu-open-button:hover {
   width: 35px;
   height: 35px;
-  background-color: white;
 }
 .menu-item {
   display: flex;
-  border: 1px solid black;
+  border: 1px solid#d24c4c;
   border-radius: 20px;
   width: 30px;
   height: 30px;
@@ -71,6 +65,7 @@ input:checked ~ .menu-open-button .menu-line-3 {
   opacity: 0;
   visibility: hidden;
   transition: opacity 0.2s ease-in-out;
+  transform: translateY(5px);
 }
 
 .menu-item:hover {
